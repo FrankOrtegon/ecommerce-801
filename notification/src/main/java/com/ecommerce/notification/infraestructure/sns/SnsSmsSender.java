@@ -13,6 +13,7 @@ public class SnsSmsSender {
     private final SnsClient snsClient;
 
     public void enviarSms(String mensaje, String numeroTelefono) {
+        System.out.println("Enviando SMS al número: " + numeroTelefono + " con el mensaje: " + mensaje);
         PublishRequest request = PublishRequest.builder()
                 .message(mensaje)
                 .phoneNumber("+57" + numeroTelefono)
